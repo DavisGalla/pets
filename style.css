@@ -1,0 +1,166 @@
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --heading-color: aqua;
+  --border-color: #000;
+  --panel-bg: #fff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #fff;
+  --heading-color: #00ffff;
+  --border-color: #fff;
+  --panel-bg: #333;
+}
+
+/* Theme toggle button */
+.theme-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  background: transparent;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.theme-switch:hover {
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.iemesli{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.iemesli >div{
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: solid var(--border-color) 1px;
+  color: var(--text-color);
+  font-size: 30px;
+  
+}
+
+svg{
+  width: 100px;
+  height: 100px;
+}
+
+.ievads{
+  font-size: 30px;
+  color: var(--text-color);
+}
+
+.heading{
+  font-size: 100px;
+  color: var(--heading-color);
+}
+
+.accordion {
+    background-color: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 18px;
+    width: 500px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  .panel {
+    padding: 0 18px;
+    background-color: var(--panel-bg);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .puzzle-game {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.game-controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.puzzle-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    background: #333;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.puzzle-slot {
+    aspect-ratio: 1;
+    border: 2px dashed #666;
+    background: rgba(255,255,255,0.1);
+    min-height: 150px;
+}
+
+.pieces-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.puzzle-piece {
+    width: 150px;
+    height: 150px;
+    cursor: grab;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.puzzle-piece:hover {
+    transform: scale(1.05);
+}
+
+#timer {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+#startGame {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #191522;
+    color: white;
+    border: solid 1px white;
+    border-radius: 4px;
+}
+
+#startGame:disabled {
+    background: #ccc;
+}
+
+.jautajumi{
+  display: flex;
+  flex-direction: row;
+}
